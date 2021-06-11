@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html id="test">
+  <head>
+    <title>Alzheimers Detection</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <script src="https://use.fontawesome.com/97935cb42c.js"></script>
+    <script
+  src="https://code.jquery.com/jquery-3.5.1.min.js"
+  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+  crossorigin="anonymous"></script>
+
+  </head>
+  <body >
+  
+    <div class="container-fluid m-5">
+    	
+
+      <div class="row">
+    		
+
+
+        <div class="col-3">
+        <img src="logo.png" alt="" >
+        <div class="btn-group-vertical m-5 ">
+          <a href="index.html" class="btn btn-block btn-primary m-2"><i class="fa fa-home fa-lg mr-2" aria-hidden="true"></i>Home</a>
+          <a href="https://www.alz.org/alzheimer_s_dementia" class="btn btn-block btn-primary m-2"><i class="fa fa-medkit fa-lg mr-2" aria-hidden="true"></i>Take Action</a>
+        </div>
+    		</div>
+    		
+
+        <div class="col-4">
+    			<h1 class="display-4"> <u>Take a <span class="text-primary">Test</span> </u></h1>
+    			<form action="/predict" method="POST">
+            <div class="form-group row">
+              <label for="age" class="col-sm-2 col-form-label">Age</label>
+              <div class="col-sm-6">
+                <input type="text" class="form-control" id="age" placeholder="Age" name="age">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="education" class="col-sm-2 col-form-label">Education</label>
+              <div class="col-sm-6">
+                <input type="text" class="form-control" id="education" placeholder="Education" name="education">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="ses" class="col-sm-2 col-form-label">SES</label>
+              <div class="col-sm-6">
+                <input type="text" class="form-control" id="ses" placeholder="SES" name="ses">
+              </div>
+            </div>          
+            <div class="form-group row">
+                <label for="mmse" class="col-sm-2 col-form-label">MMSE</label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control" id="mmse" placeholder="MMSE" name="mmse">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="cdr" class="col-sm-2 col-form-label">CDR</label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control" id="cdr" placeholder="CDR" name="cdr">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="etiv" class="col-sm-2 col-form-label">eTIV</label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control" id="etiv" placeholder="eTIV" name="etiv">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="nwbv" class="col-sm-2 col-form-label">nWBV</label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control" id="nwbv" placeholder="nWBV" name="nwbv">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="asf" class="col-sm-2 col-form-label">ASF</label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control" id="asf" placeholder="ASF" name="asf">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-8">
+                  <input type="submit" class="btn btn-primary btn-block"></input>
+                </div>
+            </div>
+          </form>
+                  <p class="text-warning bg-dark display-4">{{prediction_text}}</p>
+    		</div>
+
+
+
+
+
+
+        <div class="col">
+          
+        <h1 class="display-4">About Alzhemiers</h1>
+        
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti enim similique eos recusandae ad, quibusdam voluptas saepe magnam quaerat impedit, reprehenderit. Debitis officia, repudiandae voluptate temporibus fugiat ex accusamus, ipsum minima distinctio, doloribus atque id, maiores suscipit labore quod pariatur repellat similique! Nulla soluta, quidem? Totam quasi commodi ducimus voluptatem.</p>
+
+
+
+        <table class="table table-sm">
+  <thead>
+    <tr>
+      <th scope="col"></th>
+      <th scope="col">Parameter</th>
+      <th scope="col">Explanation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>SES</td>
+      <td>ses exlpanation</td>
+      
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>MMSE</td>
+      <td>mmse exlpanation</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+     <td>CDR</td>
+      <td>cdr exlpanation</td>
+    </tr>
+    <tr>
+      <th scope="row">4</th>
+     <td>eTIV</td>
+      <td>eTIV exlpanation</td>
+    </tr>
+<tr>
+      <th scope="row">5</th>
+     <td>nWBV</td>
+      <td>nWBV exlpanation</td>
+    </tr>
+
+
+
+
+
+  </tbody>
+</table>
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    	</div>
+    	
+    </div>
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r120/three.min.js"></script>
+<script src="vanta.cells.min.js"></script>
+<script>
+VANTA.CELLS({
+  el: "#test",
+  mouseControls: true,
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  scale: 1.00,
+  color1: 0x959595,
+  color2: 0xcccccc
+})
+</script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

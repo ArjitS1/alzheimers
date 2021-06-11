@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Alzheimers Detection</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" media="screen">
+  </head>
+  <body>
+
+
+    <div class="container m-5">
+    	<div class="row">
+    		<div class="col-3">
+    			<h1>AD</h1>
+    <h5>Alzheimers Detection</h5>
+
+    		</div>
+    		<div class="col-9">
+
+    			<h1 class="display-4"> Take a Test</h1>
+
+
+    			<form action="/predict" method="POST">
+  <div class="form-group row">
+    <label for="age" class="col-sm-2 col-form-label">Age</label>
+    <div class="col-sm-4">
+      <input type="text" class="form-control" id="age" placeholder="Age" name="age">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="education" class="col-sm-2 col-form-label">Education</label>
+    <div class="col-sm-4">
+      <input type="text" class="form-control" id="education" placeholder="Education" name="education">
+    </div>
+  </div>
+                    <div class="form-group row">
+    <label for="ses" class="col-sm-2 col-form-label">SES</label>
+    <div class="col-sm-4">
+      <input type="text" class="form-control" id="ses" placeholder="SES" name="ses">
+    </div>
+  </div>
+                    
+
+<div class="form-group row">
+    <label for="mmse" class="col-sm-2 col-form-label">MMSE</label>
+    <div class="col-sm-4">
+      <input type="text" class="form-control" id="mmse" placeholder="MMSE" name="mmse">
+    </div>
+  </div>
+
+<div class="form-group row">
+    <label for="cdr" class="col-sm-2 col-form-label">CDR</label>
+    <div class="col-sm-4">
+      <input type="text" class="form-control" id="cdr" placeholder="CDR" name="cdr">
+    </div>
+  </div>
+<div class="form-group row">
+    <label for="etiv" class="col-sm-2 col-form-label">eTIV</label>
+    <div class="col-sm-4">
+      <input type="text" class="form-control" id="etiv" placeholder="eTIV" name="etiv">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="nwbv" class="col-sm-2 col-form-label">nWBV</label>
+    <div class="col-sm-4">
+      <input type="text" class="form-control" id="nwbv" placeholder="nWBV" name="nwbv">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="asf" class="col-sm-2 col-form-label">ASF</label>
+    <div class="col-sm-4">
+      <input type="text" class="form-control" id="asf" placeholder="ASF" name="asf">
+    </div>
+  </div>
+
+
+
+  <div class="form-group row">
+    <div class="col-sm-4">
+      <input type="submit" class="btn btn-primary"></input>
+    </div>
+  </div>
+</form>
+{{prediction_text}}
+    		</div>
+    	</div>
+    	
+    </div>
+
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
